@@ -1,0 +1,6 @@
+date,description,category,type,amount
+2026-05-01,Paycheck,Income,income,1200.00
+2026-05-02,Rent,Housing,expense,700.00
+2026-05-03,Groceries,Food,expense,85.43
+2026-05-04,Gas,Transportation,expense,42.10
+2026-05-05,Restaurant,Food,expense,28.75
