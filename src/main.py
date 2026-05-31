@@ -18,14 +18,17 @@ amount_after_savings = money_left - savings_goal
 savings_rate = (savings_goal / monthly_income) * 100
 expense_rate = (total_expenses / monthly_income) * 100
 
+def print_money(label, amount): 
+    print(f"\n{label}: ${amount:,.2f}")
+
 def print_expense_breakdown():
-    print("\nExpense Breakdown:")
+    print("Expense Breakdown:")
 
     for name, amount in zip(expense_names, expenses):
         print(f"{name}: ${amount:,.2f}")    
 
 def print_summary():
-    print(f"Total Expenses: ${total_expenses:,.2f}")
+    print_money("Total Expenses", total_expenses)
     print(f"Money Left: ${money_left:,.2f}")
     print(f"Savings Goal: ${savings_goal:,.2f}")
     print(f"Savings Rate: {savings_rate:,.2f}%")
@@ -47,9 +50,11 @@ def check_budget_status():
     else: 
         print("Warning: your savings goal may be too high.")
 
-print(f"Monthly Income: ${monthly_income:,.2f}")
+print_money("\nMonthly Income", monthly_income)
+print_money("Budget Limit", budget_limit)
 print_expense_breakdown()
 print_summary()
+print("\nBudget Status:")
 check_budget_status()
 
 
